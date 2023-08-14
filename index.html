@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoftHouse</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css">
 </head>
 <body>
     <header class="header none1">
@@ -27,7 +28,11 @@
                         </nav>
                     </div>
 
-                    <div class="header__nav-btn">NAV BTN</div>
+                    <div class="header__nav-btn">
+                        <button class="nav-icon-btn">
+                            <div class="nav-icon"></div>
+                        </button>
+                    </div>
 
                 </div>
             </div>
@@ -139,9 +144,9 @@
 
                     <form action="" class="cta__form form">
                         <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off">
-                        <input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off">
+                        <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off">
 
-                        <p class="form__privacy">
+                        <p class="form__privacy form__privacy--bottom">
                             *Мы никому не передаем ваши данные. <br>И не сохраняем ваш номер в базу.
                         </p>
 
@@ -156,8 +161,8 @@
             <h2 class="visually-hidden">Видео про ЖК Loft House</h2>
             <div class="container">
                 
-
-                <a href="https://www.youtube.com/watch?v=bhJNL9JUsnY" class="video__link">
+                
+                <a href="https://www.youtube.com/watch?v=bhJNL9JUsnY" data-youtubeLightbox class="video__link">
                     <img src="./img/video/play.svg" alt="" class="video__icon">
                     <img src="./img/video/video-img.jpg" alt="" class="video__img">
                 </a>
@@ -181,23 +186,24 @@
                     <h2 class="title-2">Есть вопросы?</h2>
                 </div>
                 <form class="feedback__form form">
-                    <p class="form__privacy">
+                    <p class="form__privacy form__privacy--bottom">
                         *Мы никому не передаем ваши данные. <br>И не сохраняем ваш номер в базу.
                     </p>
 
                     <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off">
-                    <input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off">
+                    <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off">
 
                     
 
 
                     <button type="submit" class="form__btn">Посмотреть район</button>
-</form>
+                </form>
             </div>
         </section>
-        
+    </main>    
 
-        <footer class="footer none1">
+    
+    <footer class="footer none1">
             <div class="container">
                 <div class="footer__grid">
                     <div class="footer__logo">
@@ -245,7 +251,33 @@
                     </div>
                 </div>
             </div>
-        </footer>
-    </main>
+    </footer>
+
+
+    <!-- Youtube Lightbox -->
+
+    <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=4f537583-9ef9-4998-a98b-9a6ee160a9d3&lang=ru_RU" type="text/javascript">   
+    </script>
+
+    <script src="./libs/phoneMask/mask.js"></script>
+    <script src="./libs/phoneMask/mask_list.js"></script>
+
+    <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
+
+    <script src="./js/main.js"></script>
+
+
 </body>
 </html>
